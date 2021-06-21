@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- <title><a href="home.html">Home</title> -->
+        <title>Home</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> -->
+        <link href="{{ url_for('static', filename='css/main.scss.css') }}"
+        rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='css/header.scss.css') }}"
+        rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='css/footer.scss.css') }}"
+        rel="stylesheet" type="text/css">
+        <link href="{{ url_for('static', filename='css/responsive.scss.css') }}"
+        rel="stylesheet" type="text/css">
+        <style>
+        .button {
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 4px;
+        }
+        .button1 {background-color: #4CAF50;} /* Green */
+        #ff{
+          font-family: "Apple Chancery";
+        }
+        </style>
+
+    </head>
+
+    <body>
+        
+        <!--header-->
+        <header>
+            
+            <img style="margin-left:50px" src="https://img.icons8.com/cotton/64/000000/search--v2.png"/><h1 style="margin-left:-40px">PHRASE COMPOSING</h1>
+
+            
+
+        </header>
+
+        <!--corrector-->
+        <div class="main-container">
+            <div style="color: white;" id="ff">
+              <h2>Here is the best Online Sentence Correction Tool to improve word usage, tense, and to minimize Gramatical error for any English text.</h2>
+            </div>
+            <div class="textboxes-container">
+
+                <div contenteditable="true" type="text" class="text-box" id="text-box-input" data-placeholder="Write here..."></div>
+                <div contenteditable="false" class="text-box" id="text-box-output" data-placeholder="Output here...."></div>
+            </div>
+            <div class="arrow-button" id="arrow-button">
+                  <button class="button button1">Check </i></button>
+            </div>
+        </div>
+        <div>
+           .
+        </div>
+
+          <!-- <input type="text" name="" id="input"> -->
+          <!-- <button onclick="record()"><i class="fa fa-microphone">mic</button> -->
+
+        <script>
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('input').value = event.results[0][0].transcript;
+            }
+            recognition.start();
+        }
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>$('body').attr("spellcheck",false)</script>
+        <script type="module" src="../static/js/predict.js"></script>
+        <script type="module" src="../static/js/key_bind.js"></script>
+        <!-- <script src="../static/js/clean_cp.js"></script> -->
+        <!-- removed because it was causing more problems -->
+        <script type="module" src="../static/js/animations.js"></script>
+        <script type="module" src="../static/js/demo.js"></script>
+        <!-- <script>
+          document.getElementById("lelo").webkitSpeech=true;
+        </script> -->
+    </body>
+</html>

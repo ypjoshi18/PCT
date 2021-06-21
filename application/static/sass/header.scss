@@ -1,0 +1,163 @@
+@import "variables";
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::: NAV BAR :::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+nav {
+    // outline: 1px solid blue;
+    font-size: 16pt;
+    grid-area: nav;
+    align-self: end;
+    a {
+        font-family: 'Delius', cursive;
+        position: relative;
+        width: 33.333%;
+        display: table-cell;
+        text-align: center;
+        color: $beige;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 20px;
+        transition: 0.2s ease color;
+        position: relative;
+        transition: all 0.6s;
+        &:before {
+            content: "";
+            width: 0;
+            height: 0.1em;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: $beige;
+            transition: all 0.3s;
+        }
+        &:hover {
+            &:before {
+                width: 100%;
+                left: 0;
+                background: white;
+            }
+        }
+    }
+
+}
+
+nav a:nth-child(2):hover~#indicator {
+    left: 200px;
+}
+
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::: HEADER ::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+header {
+    display: grid;
+    grid-template-columns: 157px 345px 1fr 475px;
+    grid-template-rows: 1fr;
+    // gap: 0px 48px;
+    grid-template-areas: "logo tagline . demo-container ";
+    align-items: center;
+
+    color:white;
+    font-family: 'Delius', cursive;
+
+    background: linear-gradient(#250b0d, #3a111300);
+
+
+    // outline: 1px solid pink;
+    text-align: left;
+    // margin-top: 20px;
+    // margin-left: 20px;
+    position: relative;
+
+    // background-color: #0000002e;
+
+    .logo-container {
+        // outline: 1px solid violet;
+        position: relative;
+        /* width: 150px; */
+        width: 150px;
+        height: 110px;
+        grid-area: logo;
+        background: url("../img/GECko_plus_small.png");
+        // background: url("../img/GECko_logo_small.png");
+        background-repeat: no-repeat;
+        background-size: 150px;
+    }
+    .header-tagline{
+        // outline: 1px solid cyan;
+        font-size: 20pt;
+        display: inline-block;
+        grid-area: tagline;
+        padding-left: 20px;
+    }
+}
+
+#demo-container{
+    grid-area: demo-container;
+    // background-color: #0000002e;
+    box-shadow: #824242 1px 4px 0px -1px, 3px 7px 10px -1px black;
+    border-bottom-left-radius: 16px;
+    padding: 0 15px;
+    //
+    display: grid;
+    grid-template-columns:  1fr 3fr;
+    grid-template-rows: 1fr;
+    gap: 0px 30px;
+    grid-template-areas: "demo-button  demo-text";
+    align-items: center;
+
+    background-color: $bg-1;
+
+    #demo-text{
+        grid-area: demo-text;
+        font-size: 14px;
+    }
+
+}
+
+
+
+#demo-button{
+    // outline: 1px solid blue
+    grid-area: demo-button;
+    background-color: #c358580a;
+    border-radius: 14px;
+    padding: 0 6px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    // height: 45px;
+    border: 1px solid;   
+    transition: box-shadow 0.3s ease-in-out;
+
+
+    p{
+        font-size: 11pt;
+        padding-right: 15px;
+        margin: 8px 0;
+    }
+
+    #demo-logo{
+        height: 12px;
+        width: 12px;
+        filter: grayscale(80%) invert(83%);
+
+    }
+    &:hover{
+        cursor: pointer;
+        // background-color: white;
+        transition: box-shadow 0.3s ease-in-out;
+        box-shadow: #824242 3px 4px 0px -1px;
+
+        #demo-logo{
+            fill: $beige;
+        }
+    }
+    
+    &.is-clicked-demo{
+        transform: scale(0.98);
+    }
+}
