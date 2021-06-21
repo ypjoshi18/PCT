@@ -1,13 +1,13 @@
-jsonnet
-overrides
-flask
-allennlp
-python-Levenshtein
-transformers
-scikit-learn
-sentencepiece
-waitress
-pysdb
+jsonnet --use-feature=2020-resolver
+overrides --use-feature=2020-resolver
+flask --use-feature=2020-resolver
+allennlp --use-feature=2020-resolver
+python-Levenshtein --use-feature=2020-resolver
+transformers --use-feature=2020-resolver
+scikit-learn --use-feature=2020-resolver
+sentencepiece --use-feature=2020-resolver
+waitress --use-feature=2020-resolver
+pysdb --use-feature=2020-resolver
 
 
 # if torch doesn't install, execute separately :
