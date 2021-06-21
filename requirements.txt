@@ -18,7 +18,7 @@ libsass==0.20.1
 # if installation fails for other reason, you may try:
 #
 # sudo apt install gcc
-# conda install -c conda-forge jsonnet
+conda install -c conda-forge jsonnet
 
 
 # during development, you will need: 
