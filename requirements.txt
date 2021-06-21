@@ -1,13 +1,15 @@
-jsonnet --use-feature=2020-resolver
-overrides --use-feature=2020-resolver
-flask --use-feature=2020-resolver
-allennlp --use-feature=2020-resolver
-python-Levenshtein --use-feature=2020-resolver
-transformers --use-feature=2020-resolver
-scikit-learn --use-feature=2020-resolver
-sentencepiece --use-feature=2020-resolver
-waitress --use-feature=2020-resolver
-pysdb --use-feature=2020-resolver
+jsonnet
+overrides==3.1.0
+flask==1.1.2
+allennlp
+python-Levenshtein==0.12.0
+transformers==2.2.2
+scikit-learn==0.20.0
+sentencepiece
+waitress==1.4.4
+pysdb==0.0.3
+torch==1.3.0
+libsass==0.20.1
 
 
 # if torch doesn't install, execute separately :
@@ -20,4 +22,4 @@ pysdb --use-feature=2020-resolver
 
 
 # during development, you will need: 
-# libsass==0.20.1 
+# libsass==0.20.1
