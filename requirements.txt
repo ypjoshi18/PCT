@@ -1,13 +1,13 @@
 jsonnet
-overrides==3.1.0
-flask==1.1.2
-allennlp==0.8.4
+overrides
+flask
+allennlp
 python-Levenshtein
-transformers==2.2.2
-scikit-learn==0.20.0
+transformers
+scikit-learn
 sentencepiece
-waitress==1.4.4
-pysdb==0.0.3
+waitress
+pysdb
 
 
 # if torch doesn't install, execute separately :
