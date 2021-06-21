@@ -10,6 +10,7 @@ waitress==1.4.4
 pysdb==0.0.3
 torch
 libsass==0.20.1
+gcc7
 
 
 # if torch doesn't install, execute separately :
@@ -18,7 +19,7 @@ libsass==0.20.1
 # if installation fails for other reason, you may try:
 #
 # sudo apt install gcc
-conda install -c conda-forge jsonnet
+#conda install -c conda-forge jsonnet
 
 
 # during development, you will need: 
